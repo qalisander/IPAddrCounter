@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="689916b3-1b7a-4c51-947d-f262a1b151a7" name="Changes" comment="tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/IpAddrCounter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/IpAddrCounter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt" afterDir="false" />
-    </list>
+    <list default="true" id="689916b3-1b7a-4c51-947d-f262a1b151a7" name="Changes" comment="++" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +20,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="bitset solution" />
+        <option name="rewordedMessage" value="bitset solution" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="2c636d107df2b7d157e9181575c2165fddc5750e" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,6 +55,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -131,7 +137,7 @@
       <updated>1657221487219</updated>
       <workItem from="1657221491310" duration="287000" />
       <workItem from="1657221793588" duration="9349000" />
-      <workItem from="1657280499473" duration="15387000" />
+      <workItem from="1657280499473" duration="15714000" />
     </task>
     <task id="LOCAL-00001" summary="init + .idea stuff">
       <created>1657275509554</created>
@@ -168,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657289690010</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bitset solution">
+      <created>1657296057909</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657296057909</updated>
+    </task>
+    <task id="LOCAL-00007" summary="++">
+      <created>1657296087510</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657296087510</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +210,9 @@
     <MESSAGE value="simple string hashset count" />
     <MESSAGE value=".idea stuff" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="bitset solution" />
+    <MESSAGE value="++" />
+    <option name="LAST_COMMIT_MESSAGE" value="++" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

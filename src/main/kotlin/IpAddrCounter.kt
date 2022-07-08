@@ -29,7 +29,6 @@ class IpAddrCounter(reader: Reader) {
         return counter
     }
 
-    // https://kotlinlang.org/docs/extensions.html
     companion object {
         fun String.strIpToInt(): Int {
             return this
