@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="689916b3-1b7a-4c51-947d-f262a1b151a7" name="Changes" comment="tests">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/IpAddrCounter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/IpAddrCounter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap"
@@ -64,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IpAddrCounterTest.test">
+  <component name="RunManager" selected="JUnit.IpAddrCounterTest.count">
     <configuration name="IpAddrCounterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IPAddrCounter" />
       <option name="PACKAGE_NAME" value="" />
@@ -113,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IpAddrCounterTest.test" />
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="JUnit.IpAddrCounterTest" />
         <item itemvalue="JUnit.IpAddrCounterTest.count" />
         <item itemvalue="JUnit.IpAddrCounterTest.mapToUint" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.IpAddrCounterTest" />
+        <item itemvalue="JUnit.IpAddrCounterTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +131,7 @@
       <updated>1657221487219</updated>
       <workItem from="1657221491310" duration="287000" />
       <workItem from="1657221793588" duration="9349000" />
-      <workItem from="1657280499473" duration="9093000" />
+      <workItem from="1657280499473" duration="15387000" />
     </task>
     <task id="LOCAL-00001" summary="init + .idea stuff">
       <created>1657275509554</created>
@@ -161,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657289020166</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tests">
+      <created>1657289690010</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657289690010</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,17 +191,6 @@
     <MESSAGE value=".idea stuff" />
     <MESSAGE value="tests" />
     <option name="LAST_COMMIT_MESSAGE" value="tests" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/IpAddrCounterTest.kt</url>
-          <line>28</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

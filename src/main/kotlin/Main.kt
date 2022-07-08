@@ -1,7 +1,4 @@
-import java.io.BufferedReader
 import java.io.FileReader
-import java.io.Reader
-import java.io.StringReader
 
 
 fun main(args: Array<String>) {
@@ -16,10 +13,10 @@ fun main(args: Array<String>) {
 //    writing to file in Kotlin
 //    https://www.studytonight.com/kotlin/kotlin-file-handling
     
-    println("Enter file name")
+    println("Enter a file name")
     var fileName = readln()
     if (fileName.isBlank()) {
-        fileName = "ip_addresses"
+        fileName = "ip_addresses_light"
     }
     val fileReader = FileReader(fileName)
     val ipAddrCounter = IpAddrCounter(fileReader)

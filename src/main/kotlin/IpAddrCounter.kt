@@ -3,18 +3,26 @@ import java.io.Reader
 import java.util.BitSet
 
 class IpAddrCounter(reader: Reader) {
-    private val addrSet = HashSet<UInt>()
+    // Ip address is 4 bytes long, but we can index bitSet using just 2 bytes index
+    // So, we need two bitsets for positive and negative values
+    // It takes just 500mb memory for two arrays
+    private val posAddrSet = BitSet(Int.MAX_VALUE)
+    private val negAddrSet = BitSet(Int.MAX_VALUE)
     private val reader = BufferedReader(reader)
 
     fun count(): UInt {
         var counter = 0u
-        reader.forEachLine { 
-            val uintIp = it.mapToUint()
-            if (uintIp !in addrSet) {
-                counter++
-                addrSet.add(uintIp)
-                if (counter % 1_000_000u == 0u) {
-                    println(counter)
+        reader.forEachLine {
+            val intIp = it.strIpToInt()
+            if (intIp >= 0) {
+                if (!posAddrSet[intIp]) {
+                    counter++
+                    posAddrSet.set(intIp)
+                }
+            } else {
+                if (!negAddrSet[-intIp]) {
+                    counter++
+                    negAddrSet.set(-intIp)
                 }
             }
         }
@@ -23,17 +31,14 @@ class IpAddrCounter(reader: Reader) {
 
     // https://kotlinlang.org/docs/extensions.html
     companion object {
-        fun String.mapToUint(): UInt {
-            val numAndShifts = this
+        fun String.strIpToInt(): Int {
+            return this
                 .split('.')
-                .map { it.toUInt() }
-                .zip((0 until UInt.SIZE_BITS step 8).reversed())
-
-            var uintIp = 0u
-            for ((num, shift) in numAndShifts) {
-                uintIp = uintIp or (num shl shift)
-            }
-            return uintIp
+                .map { it.toInt() }
+                .zip((0 until Int.SIZE_BITS step 8).reversed())
+                .fold(0) { intIp, (num, shift) ->
+                    intIp or (num shl shift)
+                }
         }
     }
 }
