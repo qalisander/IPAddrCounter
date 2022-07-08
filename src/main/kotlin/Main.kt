@@ -1,16 +1,10 @@
-import java.io.File
-import java.io.FileOutputStream
-import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
-import kotlin.io.path.Path
-import kotlin.io.path.forEachLine
-import kotlin.io.path.useLines
+import java.io.BufferedReader
+import java.io.FileReader
+import java.io.Reader
+import java.io.StringReader
 
 
 fun main(args: Array<String>) {
-//    println("Hello World!")
-//----------------------------
 //    val fos = FileOutputStream("compressed.zip")
 //    val zos = ZipOutputStream(fos)
 //    val zipFile = ZipFile("ip_addresses.zip")
@@ -22,7 +16,13 @@ fun main(args: Array<String>) {
 //    writing to file in Kotlin
 //    https://www.studytonight.com/kotlin/kotlin-file-handling
     
-    var ipAddrCounter = IpAddrCounter("ip_addresses_light")
+    println("Enter file name")
+    var fileName = readln()
+    if (fileName.isBlank()) {
+        fileName = "ip_addresses"
+    }
+    val fileReader = FileReader(fileName)
+    val ipAddrCounter = IpAddrCounter(fileReader)
     val count = ipAddrCounter.count()
-    println("Unique ip addresses count is: ${count}")
+    println("Unique ip addresses count is: $count")
 }

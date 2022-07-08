@@ -1,33 +1,39 @@
-import kotlin.io.path.Path
-import kotlin.io.path.forEachLine
+import java.io.BufferedReader
+import java.io.Reader
+import java.util.BitSet
 
-class IpAddrCounter(fileName: String) {
-    var strAddrSet = HashSet<String>()
-    var uintAddrSet = HashSet<UInt>()
-    var filePath = Path(fileName)
+class IpAddrCounter(reader: Reader) {
+    private val addrSet = HashSet<UInt>()
+    private val reader = BufferedReader(reader)
 
     fun count(): UInt {
         var counter = 0u
-        filePath.forEachLine { 
-            if (it !in strAddrSet) {
+        reader.forEachLine { 
+            val uintIp = it.mapToUint()
+            if (uintIp !in addrSet) {
                 counter++
-                strAddrSet.add(it)
+                addrSet.add(uintIp)
+                if (counter % 1_000_000u == 0u) {
+                    println(counter)
+                }
             }
         }
         return counter
     }
 
     // https://kotlinlang.org/docs/extensions.html
-    companion object fun String.mapToUint(strIp: String): UInt {
-        val numAndShifts = strIp
-            .split('.')
-            .map { it.toUInt() }
-            .zip(0 until UInt.SIZE_BITS step 8)
+    companion object {
+        fun String.mapToUint(): UInt {
+            val numAndShifts = this
+                .split('.')
+                .map { it.toUInt() }
+                .zip((0 until UInt.SIZE_BITS step 8).reversed())
 
-        var uintIp = 0u
-        for ((num, shift) in numAndShifts) {
-            uintIp = uintIp or (num shl shift)
+            var uintIp = 0u
+            for ((num, shift) in numAndShifts) {
+                uintIp = uintIp or (num shl shift)
+            }
+            return uintIp
         }
-        return uintIp
     }
 }
