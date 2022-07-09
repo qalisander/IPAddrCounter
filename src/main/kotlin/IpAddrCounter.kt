@@ -3,7 +3,8 @@ import java.io.Reader
 import java.util.BitSet
 
 class IpAddrCounter(reader: Reader) {
-    // Ip address is 4 bytes long, but we can index bitSet using just 2 bytes index
+    // Ip address is 4 bytes long, but we can index bitSet with just ~2 billion index
+    // (Negative Int is not valid for indexing)
     // So, we need two bitsets for positive and negative values
     // It takes just 500mb memory for two arrays
     private val posAddrSet = BitSet(Int.MAX_VALUE)
